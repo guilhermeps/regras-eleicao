@@ -1,0 +1,7 @@
+runtime: nodejs10
+handlers:
+- url: /
+  static_files: regras-eleicao-pwa/index.html
+  upload: regras-eleicao-pwa/index.html
+- url: /
+  static_dir: regras-eleicao-pwa
