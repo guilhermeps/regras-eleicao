@@ -1,35 +1,17 @@
 <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
-
-<mat-drawer-container autosize>
-    <mat-drawer #drawer mode="side" [opened]="sideBarOpen">
-        <app-sidebar (toggleSideBarForMe)="sideBarToggler($event)"></app-sidebar>
-    </mat-drawer>
-    <mat-drawer-content class="content-container">
-      <mat-form-field>
-        <mat-label>Procurar</mat-label>
-        <input matInput type="text" [(ngModel)]="searchTerm" (input)="search($event)">
-        <button mat-button *ngIf="searchTerm" matSuffix mat-icon-button aria-label="Limpar" (click)="searchTerm=''; filteredRules = rules">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-      <mat-card *ngFor="let rule of filteredRules">
-        <mat-card-title>{{rule.area}}</mat-card-title>
-        <mat-card-content>
-          <div class="allowed-container" *ngIf="rule.actionAllowed">
-            <span>
-              <mat-icon>thumb_up</mat-icon>
-              <strong>Permitido</strong>
-            </span>
-            <p>{{rule.actionAllowed}}</p>
-          </div>
-          <div class="not-allowed-container">
-            <span>
-              <mat-icon>thumb_down</mat-icon>
-              <strong>Não permitido</strong>
-            </span>
-            <p>{{rule.actionNotAllowed}}</p>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </mat-drawer-content>
-</mat-drawer-container>
+<mat-tab-group mat-stretch-tabs headerPosition="below">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>rule</mat-icon>
+      Regras
+    </ng-template>
+    <app-rules></app-rules>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>date_range</mat-icon>
+      Calendário
+    </ng-template>
+    <app-timeline></app-timeline>
+  </mat-tab>
+</mat-tab-group>

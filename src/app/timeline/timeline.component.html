@@ -1,0 +1,18 @@
+<div class="space"></div>
+<div *ngFor="let electionEvent of events; let index;">
+    <mat-card>
+        <mat-card-title>
+            <mat-icon>event</mat-icon>
+            <span *ngIf="electionEvent.begins">{{ electionEvent.begins }}</span>
+            <span *ngIf="electionEvent.begins && electionEvent.ends"> à </span>
+            <span *ngIf="electionEvent.ends">{{ electionEvent.ends}}</span>
+        </mat-card-title>
+        <mat-card-content>
+            <mat-icon>{{electionEvent.icon}}</mat-icon>
+            {{ electionEvent.name }}
+        </mat-card-content>
+    </mat-card>
+    <div class="separator" *ngIf="electionEvent !== events[events.length -1]">
+    </div>
+</div>
+<div class="space"></div>

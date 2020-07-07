@@ -1,0 +1,32 @@
+.separator {
+    border-left: dashed 2px;
+    border-color: rgba(30, 130, 76, 1);
+    margin-left: 40px;
+    width: 100px;
+    height: 50px;
+}
+
+mat-card {
+    margin: 20px;
+    background-color: rgba(30, 130, 76, 0.7);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #fff;
+}
+
+mat-card-title {
+    color: #fff;
+    font-size: medium;
+}
+
+mat-card-title mat-icon {
+    margin-right: 5px;
+}
+
+mat-card-content mat-icon {
+    margin-right: 5px;
+}
+
+.space {
+    height: 20px;
+}

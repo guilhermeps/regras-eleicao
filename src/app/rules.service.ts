@@ -12,14 +12,14 @@ export interface IRule {
 })
 export class RulesService {
 
-  rules: IRule[];
+  private rules: IRule[];
 
   constructor() {
     this.rules = [];
     this.rules.push({
       area: 'COMÍCIO',
       actionAllowed: `A partir do dia previsto para início da
-      campanha e agosto até 48h antes do
+      campanha em 27/09/2020 até 48h antes do
       dia das eleições, das 8h às 24h, com
       exceção do comício de encerramento
       da campanha, que poderá ser
@@ -35,7 +35,7 @@ export class RulesService {
     });
     this.rules.push({
       area: 'ALTO FALANTE E AMPLIFICADORES',
-      actionAllowed: `A partir do dia previsto para início e até
+      actionAllowed: `A partir do dia previsto para início (27/09/2020) e até
       a véspera da eleição, entre 8h e 22h,
       apenas, para sonorização de
       comícios, passeatas e carreatas`,
@@ -55,7 +55,7 @@ export class RulesService {
     });
     this.rules.push({
       area: 'CAMINHADA, PASSEATA E CARREATA',
-      actionAllowed: `A partir do dia 16 de agosto até as 22h
+      actionAllowed: `A partir do dia 27/09/2020 até as 22h
       do dia que antecede as eleições.
       Permitida a distribuição de material
       gráfico, acompanhados ou não de
@@ -211,22 +211,13 @@ export class RulesService {
       actionAllowed: `Apenas para a propaganda eleitoral
       gratuita, veiculada nos 35 dias
       anteriores à antevéspera das
-      eleições (de 28 de agosto a 01 de
-      outubro), e debates eleitorais.`,
+      eleições, e debates eleitorais.`,
       actionNotAllowed: `Qualquer propaganda eleitoral
       (ostensiva ou dissimulada) mediante
       pagamento. Com exceção da
       propaganda eleitoral gratuita, é vedado
-      às emissoras transmitir, a partir de 30
-      de junho, programa apresentado ou
-      comentado por pré-candidato.
-      A partir de 6 de agosto, estão proibidas
-      as condutas proibidas pelo art. 43 da
-      Res. TSE n.º 23.610/2019, sob pena de
-      multa e apuração do abuso
-      correspondente ao tratamento
-      privilegiado conferido a candidato,
-      partido ou coligação.`,
+      às emissoras transmitir, a partir de 11/08/2020, programa apresentado ou
+      comentado por pré-candidato.`,
       searchTerm: ''
     });
     this.rules.push({
