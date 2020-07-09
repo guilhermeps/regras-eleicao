@@ -1,5 +1,5 @@
 <p style="font-weight: bolder;">{{risingFundsRules.description}}</p>
-<div *ngFor="let rule of risingFundsRules.rules">
+<div style="text-align: justify;" *ngFor="let rule of risingFundsRules.rules">
     <p [ngStyle]="{'font-weight': rule.bold ? 'bold' : 'normal'}">
         <span [ngStyle]="{'margin-left': rule.margin ? '13px' : '0px'}">{{rule.text}}</span>
     </p>
