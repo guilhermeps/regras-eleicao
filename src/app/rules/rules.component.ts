@@ -10,7 +10,6 @@ export class RulesComponent implements OnInit {
 
   rules: IRule[];
   filteredRules: IRule[];
-  sideBarOpen = true;
   searchTerm: string;
   
   constructor(private service: RulesService) {
@@ -25,7 +24,6 @@ export class RulesComponent implements OnInit {
   search(input: any) {
     const term = input.target.value ?? '';
     if (term.length > 2) {
-      debugger;
       this.filteredRules = this.rules.filter(r => 
         r.searchTerm.toLowerCase().includes(term.toLowerCase()));
     } else {

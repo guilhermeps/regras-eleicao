@@ -17,6 +17,8 @@ export interface IDisincompatibilization {
 export class DisincompatilizationComponent implements OnInit {
 
   disincompatibilizationList: IDisincompatibilization[];
+  filteredDisincompatibilizationList: IDisincompatibilization[];
+  searchTerm: string;
 
   constructor() {
     this.disincompatibilizationList = [];
@@ -272,6 +274,16 @@ export class DisincompatilizationComponent implements OnInit {
         inatividade ou a agregação, conforme o caso.`
       ]
     });
+    this.filteredDisincompatibilizationList = this.disincompatibilizationList;
   }
 
+  search(input: any) {
+    const term = input.target.value ?? '';
+    if (term.length > 2) {
+      this.filteredDisincompatibilizationList = this.disincompatibilizationList.filter(r => 
+        r.actualPosition.toLowerCase().includes(term.toLowerCase()));
+    } else {
+      this.filteredDisincompatibilizationList = this.disincompatibilizationList;
+    }
+  }
 }
