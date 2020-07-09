@@ -1,0 +1,22 @@
+.highligth-yellow {
+    background-color: yellow;
+}
+
+.highligth-green {
+    background-color: green;
+    color: #fff;
+}
+
+.special-conditions-container {
+    background-color: rgba(106, 165, 243, 0.3);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+mat-card {
+    border-left: solid 2px;
+    border-color: rgba(30, 130, 76, 1);
+    margin-bottom: 20px;
+    margin-top: 2px;
+}

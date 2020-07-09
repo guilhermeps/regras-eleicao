@@ -1,0 +1,13 @@
+<p style="font-weight: bolder;">{{risingFundsRules.description}}</p>
+<div *ngFor="let rule of risingFundsRules.rules">
+    <p [ngStyle]="{'font-weight': rule.bold ? 'bold' : 'normal'}">
+        <span [ngStyle]="{'margin-left': rule.margin ? '13px' : '0px'}">{{rule.text}}</span>
+    </p>
+</div>
+<div class="not-allowed-container">
+  <span>
+    <mat-icon>clear</mat-icon>
+    <strong>Proibido</strong>
+  </span>
+  <p *ngFor="let item of risingFundsRules.forbiden">{{item}}</p>
+</div>

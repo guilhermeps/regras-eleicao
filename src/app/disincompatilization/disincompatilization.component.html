@@ -1,0 +1,37 @@
+<div style="text-align: justify;">
+  <p>Estão exauridos os prazos que se findaram antes da EC 107/2020, assim:</p>
+  <p style="margin-left: 13px;">a) De filiação partidária foi exaurido dia 04 de abril.</p>
+  <p style="margin-left: 13px;">b) De domicilio eleitoral foi exaurido dia 04 de abril.</p>
+  <p style="margin-left: 13px;">c) Os prazos para desincompatibilização que, na data da publicação da Emenda
+    Constitucional, estiverem:</p>
+  <p>A vencer: serão computados considerando-se a nova data de realização das eleições de 2020;</p>
+  <p>Portanto:</p>
+  <p class="highligth-yellow">Os prazo de 06 e 04 meses de desincompatibilização já foram exauridos.</p>
+  <p><span class="highligth-green">O prazo de 03 meses de desincompatibilização</span>, como por exemplo, para os
+    servidores públicos, ainda não foram exauridos e serão computados
+    considerando-se a nova data das eleições de 2020, ou seja, <span class="highligth-green">será no dia 15 de agosto de
+      2020</span>.</p>
+
+</div>
+
+<mat-card *ngFor="let item of disincompatibilizationList">
+  <mat-card-subtitle>
+    <mat-icon>bookmark</mat-icon>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <p><strong>Cargo atual</strong>: {{item.actualPosition}}<p>
+    <p><strong>Cargo pretendido</strong>: {{item.pretendedPosition}}<p>
+    <p *ngIf="!item.isThereDisincompatibilization">
+        <span style="font-weight: bolder;">Não há desincompatibilização</span>
+    <p>
+    <p *ngIf="item.isThereDisincompatibilization && item.specialConditions.length == 0">
+        <strong>Prazo</strong>: {{item.deadline}}
+    <p>
+    <p *ngIf="item.isThereDisincompatibilization && item.specialConditions.length == 0">
+        <strong>Data</strong>: {{ item.date}}
+    <p>
+    <div *ngIf="item.specialConditions.length > 0" class="special-conditions-container">
+        <p *ngFor="let cond of item.specialConditions"> {{cond}}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

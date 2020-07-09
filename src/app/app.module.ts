@@ -11,12 +11,16 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RulesComponent } from './rules/rules.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { RiseFundsComponent } from './rise-funds/rise-funds.component';
+import { DisincompatilizationComponent } from './disincompatilization/disincompatilization.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RulesComponent,
-    TimelineComponent
+    TimelineComponent,
+    RiseFundsComponent,
+    DisincompatilizationComponent
   ],
   imports: [
     BrowserModule,

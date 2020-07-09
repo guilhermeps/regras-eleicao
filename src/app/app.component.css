@@ -16,3 +16,17 @@ mat-tab-group {
     height: calc(100% - 57px);
     min-height: calc(100% - 57px);
 }
+
+.mat-tab-label {
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-tab .mat-tab-body-wrapper {
+    height: 100%;
+}
