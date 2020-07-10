@@ -1,5 +1,5 @@
 <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
-<mat-tab-group mat-stretch-tabs headerPosition="below" class="custom-tab">
+<mat-tab-group [color]=""  mat-stretch-tabs headerPosition="below" class="custom-tab">
   <mat-tab>
     <ng-template mat-tab-label>
       <div class="menu">
@@ -29,7 +29,7 @@
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-description>
-            <mat-icon style="margin-right: 5px;">monetization_on</mat-icon>
+            <mat-icon style="margin-right: 5px; color: #0000FF;">monetization_on</mat-icon>
             Arrecadação e recursos
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -38,7 +38,7 @@
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-description>
-            <mat-icon style="margin-right: 5px;">pan_tool</mat-icon>
+            <mat-icon style="margin-right: 5px; color: #0000FF;">pan_tool</mat-icon>
             Desincompatibilização
           </mat-panel-description>
         </mat-expansion-panel-header>

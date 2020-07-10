@@ -1,7 +1,7 @@
 {
   "name": "Regras da Campanha Eleitoral de 2020",
   "short_name": "Regras Campanha 2020",
-  "theme_color": "#f9690e",
+  "theme_color": "#009c3b",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

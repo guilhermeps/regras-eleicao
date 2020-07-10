@@ -1,6 +1,6 @@
 .separator {
     border-left: dashed 2px;
-    border-color: rgba(30, 130, 76, 1);
+    border-color: #009c3b;
     margin-left: 40px;
     width: 100px;
     height: 50px;
@@ -8,14 +8,15 @@
 
 mat-card {
     margin: 20px;
-    background-color: rgba(30, 130, 76, 0.7);
+    background-color: #0000FF;
     margin-bottom: 0px;
     margin-top: 0px;
-    color: #fff;
+    color: #000;
+    background-color: #ffdf00
 }
 
 mat-card-title {
-    color: #fff;
+    color: #000;
     font-size: medium;
 }
 
